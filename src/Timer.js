@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-function App() {
+import './Timer.css'
+
+function Timer() {
 
   const [timer, setTimer] = useState(10*60);
 
   
   useEffect(() => {
     if (timer === 0) {
-      setTimer(10)
+      setTimer(600)
       return
     }
 
@@ -17,7 +19,7 @@ function App() {
   }, [timer]);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div className="container">
       {String(Math.floor(timer/60)).padStart('2', 0)}:
       {String(Math.floor(timer%60)).padStart('2', 0)}
     </div>
@@ -25,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default Timer;
