@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Timer from './Timer';
+import App from './Timer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Timer />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
